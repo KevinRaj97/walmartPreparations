@@ -293,7 +293,7 @@ object Solution {
     }
 }
 
-6.Maximum points::
+6.Maximum points:::
 
 import java.io._
 import java.math._
