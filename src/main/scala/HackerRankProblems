@@ -381,7 +381,7 @@ object Solution {
 }
 
 
-7.Plus Minus:
+7.Plus Minus::
 
 import java.io._
 import java.math._
