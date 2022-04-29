@@ -463,3 +463,229 @@ object Solution {
 }
 
 
+8.Largest sum in Array:
+
+object ArrayMaximum extends App {
+
+  val a = Array(256741038, 623958417, 467905213, 714532089, 938071625)
+//  2063136757 2744467344
+
+  var min:Long = a(0) // taking index(0) as minimum
+  var max:Long = min  //swapping the values
+  var sum:Long = min
+
+  for (i <- 1 until a.length) {
+    sum += a(i)
+    if (a(i) < min) {
+      min = a(i)
+    }
+    else if (a(i) > max) {
+      max = a(i)
+    }
+  }
+  println(min)
+  println(max)
+  println(sum)
+
+  var a1: Long =sum-max
+  var b: Long =sum-min
+
+  println(a1+" "+b)
+}
+
+9.Equalise the Array
+
+import java.io._
+import java.math._
+import java.security._
+import java.text._
+import java.util._
+import java.util.concurrent._
+import java.util.function._
+import java.util.regex._
+import java.util.stream._
+import scala.collection.immutable._
+import scala.collection.mutable._
+import scala.collection.concurrent._
+import scala.concurrent._
+import scala.io._
+import scala.math._
+import scala.sys._
+import scala.util.matching._
+import scala.reflect._
+
+object Result {
+
+    /*
+     * Complete the 'equalizeArray' function below.
+     *
+     * The function is expected to return an INTEGER.
+     * The function accepts INTEGER_ARRAY arr as parameter.
+     */
+
+    def equalizeArray(arr: Array[Int]): Int = {
+    // Write your code here
+
+var maxcount = 0
+
+  for (i <- 0 until arr.length) {
+    var count =0
+    for(j<-0 until arr.length)
+      {
+        if(arr(i)==arr(j))
+          {
+            count+=1
+          }
+      }
+    if(maxcount<count)
+      {
+        maxcount=count
+      }
+  }
+  arr.size-maxcount
+    }
+
+}
+
+object Solution {
+    def main(args: Array[String]) {
+        val printWriter = new PrintWriter(sys.env("OUTPUT_PATH"))
+
+        val n = StdIn.readLine.trim.toInt
+
+        val arr = StdIn.readLine.replaceAll("\\s+$", "").split(" ").map(_.trim.toInt)
+
+        val result = Result.equalizeArray(arr)
+
+        printWriter.println(result)
+
+        printWriter.close()
+    }
+}
+
+
+10.SubArrayDivision:
+
+import java.io._
+import java.math._
+import java.security._
+import java.text._
+import java.util._
+import java.util.concurrent._
+import java.util.function._
+import java.util.regex._
+import java.util.stream._
+import scala.collection.immutable._
+import scala.collection.mutable._
+import scala.collection.concurrent._
+import scala.concurrent._
+import scala.io._
+import scala.math._
+import scala.sys._
+import scala.util.matching._
+import scala.reflect._
+
+object Result {
+
+    /*
+     * Complete the 'birthday' function below.
+     *
+     * The function is expected to return an INTEGER.
+     * The function accepts following parameters:
+     *  1. INTEGER_ARRAY s
+     *  2. INTEGER d
+     *  3. INTEGER m
+     */
+
+    def birthday(s: Array[Int], d: Int, m: Int): Int = {
+    // Write your code here
+
+  val length: Int = s.length
+
+  var sum = 0
+
+  if (length == 1) {
+    for (j <- s) {
+      if (j.equals(d)) {
+        sum += 1
+      }
+    }
+  }
+  if (length >= 1)
+    for (i <- 0 until (s.length - 1)) {
+      if (s(i) + s(i + 1) == d) {
+        sum += 1
+      }
+    }
+  sum
+}
+}
+
+object Solution {
+    def main(args: Array[String]) {
+        val printWriter = new PrintWriter(sys.env("OUTPUT_PATH"))
+
+        val n = StdIn.readLine.trim.toInt
+
+        val s = StdIn.readLine.replaceAll("\\s+$", "").split(" ").map(_.trim.toInt)
+
+        val firstMultipleInput = StdIn.readLine.replaceAll("\\s+$", "").split(" ")
+
+        val d = firstMultipleInput(0).toInt
+
+        val m = firstMultipleInput(1).toInt
+
+        val result = Result.birthday(s, d, m)
+
+        printWriter.println(result)
+
+        printWriter.close()
+    }
+}
+
+
+11.GradesProblem
+
+object Grades extends App {
+
+  val a = Array(77, 55, 33, 38)
+
+  var array = ArrayBuffer[Int]()
+
+  for (i <- a) {
+    println(if (i < 38 || i % 5 < 3) i
+    else i + (5 - i % 5))
+  }
+
+}
+
+12.MaximumMinimum Array
+
+
+object ArrayMaximum extends App {
+
+  val a = Array(256741038, 623958417, 467905213, 714532089, 938071625)
+  //  2063136757 2744467344
+
+  var min:Long = a(0) // taking index(0) as minimum
+  var max:Long = min  //swapping the values
+  var sum:Long = min
+
+  for (i <- 1 until a.length) {
+    sum += a(i)
+    if (a(i) < min) {
+      min = a(i)
+    }
+    else if (a(i) > max) {
+      max = a(i)
+    }
+  }
+  println(min)
+  println(max)
+  println(sum)
+
+  var a1: Long =sum-max
+  var b: Long =sum-min
+
+  println(a1+" "+b)
+}

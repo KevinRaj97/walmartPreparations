@@ -17,8 +17,8 @@ object SortingArray extends App {
       }
     }
   }
-  //  for (o <- array) {
-  //    println(o + " ")
-  //  }
+    for (o <- array) {
+      println(o + " ")
+    }
 
 }
